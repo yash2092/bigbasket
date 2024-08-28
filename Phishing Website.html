@@ -36,6 +36,8 @@
             padding: 10px 20px;
             border-radius: 5px;
             font-weight: bold;
+            display: inline-block;
+            margin-top: 20px;
         }
         .link:hover {
             background-color: #0f0;
@@ -53,15 +55,16 @@
     </style>
 </head>
 <body>
-    <img src="background.jpg" alt="Hacker Background" class="background-image">
-    <div class="container">
-        <div class="headline">You have been phished.</div>
-        <div class="subheadline">
-            Now as part of compliance, please click here to access the course of learning
+    <img src="background.jpg" alt="Dimly lit room with code on a screen, representing a hacker environment" class="background-image">
+    <main class="container">
+        <section>
+            <div class="headline">You have been phished.</div>
             <div class="subheadline">
-             <a href="https://example.com/security-awareness" class="link">Security Awareness</a>
-             </div>
-        </div>
-    </div>
+                As part of compliance, please access the required learning course by clicking below:
+            </div>
+            <a href="https://example.com/security-awareness" class="link" aria-label="Security Awareness Course">Security Awareness</a>
+        </section>
+    </main>
 </body>
 </html>
+
