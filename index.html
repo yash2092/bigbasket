@@ -12,9 +12,6 @@
             background-color: #000;
             color: #0f0;
             text-align: center;
-            background-image: url('background.jpg');
-            background-size: cover;
-            background-position: center;
         }
         .container {
             position: absolute;
@@ -39,22 +36,34 @@
             padding: 10px 20px;
             border-radius: 5px;
             font-weight: bold;
-            display: inline-block;
-            margin-top: 20px;
         }
         .link:hover {
             background-color: #0f0;
             color: #000;
         }
+        .background-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.5;
+            background-image: url('background.jpg');
+            background-size: cover;
+            background-position: center;
+        }
     </style>
 </head>
 <body>
+    <div class="background-image"></div>
     <div class="container">
         <div class="headline">You have been phished.</div>
         <div class="subheadline">
-            Now as part of compliance, please <a href="https://bigbasket.centumlearnpro.in/#!/module/2675" class="link" aria-label="Visit BigBasket">visit BigBasket</a>.
+            Now as part of compliance, please <a href="https://bigbasket.centumlearnpro.in/#!/module/2675" class="link">click here to access the course of learning</a>
         </div>
     </div>
 </body>
 </html>
+
 
