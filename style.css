@@ -1,0 +1,102 @@
+/* Global */
+:root {
+  --bg: #000;
+  --fg: #00ff00;
+  --fg-dim: rgba(0, 255, 0, 0.85);
+  --border: rgba(0, 255, 0, 0.9);
+  --shadow: rgba(0, 255, 0, 0.18);
+  --font: "Courier New", Courier, monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--fg);
+}
+
+/* App layout */
+.app {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.backgroundImage {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  opacity: 0.5;
+  background-image: url("./background.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.centeredLayout {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  text-align: center;
+}
+
+.content {
+  width: min(980px, 100%);
+}
+
+.headline {
+  margin: 0;
+  font-size: clamp(2.25rem, 5vw, 4rem);
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  text-shadow: 0 0 22px var(--shadow);
+}
+
+.subheadline {
+  margin: 18px auto 0;
+  font-size: clamp(1rem, 2.2vw, 1.5rem);
+  color: var(--fg-dim);
+  line-height: 1.45;
+}
+
+.actions {
+  margin-top: 22px;
+}
+
+.actionLink {
+  display: inline-block;
+  color: var(--fg);
+  text-decoration: none;
+  border: 2px solid var(--border);
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: 700;
+  box-shadow: 0 0 0 0 rgba(0, 255, 0, 0);
+  transition: background-color 140ms ease, color 140ms ease, box-shadow 180ms ease;
+}
+
+.actionLink:hover,
+.actionLink:focus-visible {
+  background-color: var(--fg);
+  color: var(--bg);
+  box-shadow: 0 0 0 6px rgba(0, 255, 0, 0.15);
+  outline: none;
+}
+
+.finePrint {
+  margin-top: 18px;
+  font-size: 0.95rem;
+  color: rgba(0, 255, 0, 0.65);
+}
